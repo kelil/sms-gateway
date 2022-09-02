@@ -6,13 +6,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { SmsFromFileComponent } from './messageManagement/sms-from-file/sms-from-file.component';
 import { ViewMessagesComponent } from './messageManagement/view-messages/view-messages.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [{ path: "home", component: HomeComponent },
 { path: "dashboard", component: DashboardComponent },
 {path: "login", component: LoginComponent },
 {path: "users/register", component: RegisterComponent },
 {path: "messages/smsfromfile", component: SmsFromFileComponent},
-{path: "messages/viewmessages", component: ViewMessagesComponent}
+{path: "messages/viewmessages", component: ViewMessagesComponent},
+{path: "users/profile", component: UserComponent}
 ];
 
 @NgModule({

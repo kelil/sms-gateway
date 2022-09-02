@@ -32,6 +32,7 @@ import { httpInterceptorProviders } from './_helpers/http.interceptors';
 import { SmsFromFileComponent } from './messageManagement/sms-from-file/sms-from-file.component';
 import { ViewMessagesComponent } from './messageManagement/view-messages/view-messages.component';
 import { BnNgIdleService } from 'bn-ng-idle';
+import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { BnNgIdleService } from 'bn-ng-idle';
     LoginComponent,
     RegisterComponent,
     SmsFromFileComponent,
-    ViewMessagesComponent
+    ViewMessagesComponent,
+    UserComponent
 
   ],
   imports: [

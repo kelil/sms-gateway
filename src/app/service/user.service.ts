@@ -11,8 +11,6 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
   
-   
-
   getAll(){
     return this.http.get(environment.API_OUT_URL+"api/v1/users");
   }
@@ -32,16 +30,11 @@ export class UserService {
     return this.http.delete(environment.API_OUT_URL+"api/v1/users/user/"+id);
   }
 
-  checkPassword(password: any, id: any) {
-    let data = {
-      "id": id,
-      "password": password
-    }
-    console.log(data)
-    return this.http.post(environment.API_OUT_URL+"api/v1/users/password",data);
+  checkPassword(password: any): Observable<any> {
+    return this.http.post(environment.API_OUT_URL+"api/auth/password",password);
 }
 
-updateUser(password:any,id:any){
+updateUser(password:any,id:any): Observable<any>{
   return this.http.patch(environment.API_OUT_URL+"api/auth/update/"+id,password);
 }
 }
