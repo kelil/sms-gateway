@@ -31,6 +31,7 @@ import { IgxButtonModule, IgxIconModule, IgxCardModule, IgxRippleModule } from "
 import { httpInterceptorProviders } from './_helpers/http.interceptors';
 import { SmsFromFileComponent } from './messageManagement/sms-from-file/sms-from-file.component';
 import { ViewMessagesComponent } from './messageManagement/view-messages/view-messages.component';
+import { BnNgIdleService } from 'bn-ng-idle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,12 +70,14 @@ import { ViewMessagesComponent } from './messageManagement/view-messages/view-me
     IgxButtonModule,
     IgxIconModule,
     IgxCardModule,
-    IgxRippleModule
+    IgxRippleModule,
+    
 
     //I keep the new line
   ],
   providers: [
-    httpInterceptorProviders
+    httpInterceptorProviders,
+    BnNgIdleService
   ],
   bootstrap: [AppComponent]
 })
